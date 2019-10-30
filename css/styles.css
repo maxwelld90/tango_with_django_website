@@ -203,26 +203,30 @@ nav ul.links {
                 margin: 0;
             }
 
-            nav div.nav-footer div.text span.copyright-us {
-                font-size: 15pt;
-                font-weight: bold;
-                min-height: 20pt;
-                font-family: 'Raleway', sans-serif;
-            }
+/* Copyright span elements (for both rose footer and navbar footer) */
 
-            nav div.nav-footer div.text span.copyright-other {
-                font-size: 12pt;
-                font-style: italic;
-            }
+span.copyright-us {
+    font-size: 15pt;
+    font-weight: bold;
+    min-height: 20pt;
+    font-family: 'Raleway', sans-serif;
+}
 
-                nav div.nav-footer div.text span.copyright-other a {
-                    color: #FFF;
-                    text-decoration: none;
-                }
+span.copyright-other {
+    font-size: 12pt;
+    font-style: italic;
+}
 
-                nav div.nav-footer div.text span.copyright-other a:hover {
-                    text-decoration: underline;
-                }
+    span.copyright-other a {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    span.copyright-other a:hover {
+        text-decoration: underline;
+    }
+
+/* Main content */
 
 main {
     flex: 0.72;
@@ -326,12 +330,32 @@ main {
             background-color: rgba(255, 255, 255, 0.3);
         }
     
-    main div.rose {
-        min-height: 100px;
+    main div.rose-footer {
+        margin: 0 50px 0 50px;
+        position: relative;
+        height: 100px;
         background-image: url('../img/rose.svg');
         background-repeat: no-repeat;
-        background-position: 95% bottom;
+        background-position: right bottom;
     }
+
+        main div.rose-footer span {
+            display: none;
+        }
+
+        main div.rose-footer span.copyright-other a {
+            color: #000;
+        }
+
+        main div.rose-footer span.copyright-us {
+            position: absolute;
+            bottom: 28px;
+        }
+
+        main div.rose-footer span.copyright-other {
+            position: absolute;
+            bottom: 10px;
+        }
 
 /* Technologies grid custom stylings */
 
@@ -558,9 +582,11 @@ ul.contact li.twitter {
     background-repeat: no-repeat;
 }
 
+/**********************/
 /* Responsive styling */
+/**********************/
 
-@media(max-height:865px) {
+@media(max-height: 865px) { /* Styles for the navbar footer messages -- hide the navbar landscapes below a certain height */
     nav div.nav-footer div.landscape {
         display: none;
     }
@@ -573,5 +599,15 @@ ul.contact li.twitter {
 
     nav div.nav-footer div.text span.copyright-other a {
         color: #160F0B;
+    }
+}
+
+@media(max-height: 730px) { /* Styles for the navbar/rose footer messages -- move to the rose when below a certain height */
+    nav div.nav-footer {
+        display: none;
+    }
+
+    main div.rose-footer span {
+        display: block;
     }
 }
