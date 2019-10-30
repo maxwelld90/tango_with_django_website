@@ -509,13 +509,33 @@ ul.authors li {
         }
 
         ul.authors li div.text ul.links li a {
-            padding: 8px;
+            padding: 8px 8px 8px calc(13px + 12pt);
             font-family: 'Raleway', sans-serif;
+            font-size: 12pt;
             text-decoration: none;
             color: #FFF;
             background-color: rgba(255, 255, 255, 0.1);
+            background-size: 12pt 12pt;
+            background-repeat: no-repeat;
+            background-position: 8px 50%;
+        }
+
+        ul.authors li div.text ul.links li a.website {
+            background-image: url('../img/icons.svg#earth');
+        }
+
+        ul.authors li div.text ul.links li a.email {
+            background-image: url('../img/icons.svg#email');
+        }
+
+        ul.authors li div.text ul.links li a.twitter {
+            background-image: url('../img/icons.svg#bird');
+        }
+
+        ul.authors li div.text ul.links li a.git {
+            background-image: url('../img/icons.svg#git-branches');
         }
 
         ul.authors li div.text ul.links li a:hover {
-            background-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(255, 255, 255, 0.3);
         }
