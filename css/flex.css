@@ -1,0 +1,76 @@
+/* Copied from dmax.org.uk CSS */
+
+.flex-container {
+    display: flex;
+    margin: 0 25px 0 25px;
+}
+
+.flex-container.variable-height {
+    align-items: flex-start;
+}
+
+.flex-container > div {
+}
+
+.flex-container > .flex-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    .flex-container > .flex-item:first-child {
+        margin-left: 0;
+    }
+
+    .flex-container > .flex-item:last-child {
+        margin-right: 0;
+    }
+
+.flex-container > .flex-item.whole {
+    flex: 1;
+}
+
+.flex-container > .flex-item.one-half {
+    flex: 0.5;
+}
+
+.flex-container > .flex-item.one-third {
+    flex: 0.333333;
+}
+
+.flex-container > .flex-item.two-thirds {
+    flex: 0.666666;
+}
+
+.flex-container > .flex-item.one-fifth {
+    flex: 0.2;
+}
+
+.flex-container > .flex-item.four-fifths {
+    flex: 0.8;
+}
+
+.flex-container > .flex-item.three-fifths {
+    flex: 0.6;
+}
+
+.flex-container > .flex-item.two-fifths {
+    flex: 0.4;
+}
+
+@media screen and (max-width: 850px) {
+    .flex-container {
+        display: block;
+    }
+    
+    .flex-container > .flex-item {
+        margin: 10px 0 10px 0;
+    }
+    
+    .flex-container > .flex-item:first-child {
+        margin-top: 0;
+    }
+    
+    .flex-container > .flex-item:last-child {
+        margin-bottom: 0;
+    }
+}

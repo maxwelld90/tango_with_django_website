@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="418px" height="252px" viewBox="0 0 418 252" enable-background="new 0 0 418 252" xml:space="preserve">
+
+    <defs>
+        <style>
+            .background {
+                display: none;
+            }
+            
+            .background:target {
+                display: inline;
+            }
+        </style>
+    </defs>
+
+    <g>
+	<defs>
+		<rect id="EDI1_SVGID_1_" y="-120.437" width="418" height="372.437"/>
+	</defs>
+	<clipPath id="EDI1_SVGID_2_">
+		<use xlink:href="#EDI1_SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	
+		<linearGradient id="EDI1_SVGID_3_" gradientUnits="userSpaceOnUse" x1="-87.9131" y1="546.9922" x2="-87.2344" y2="546.9922" gradientTransform="matrix(0 -548.9498 -553.2813 0 302850.2812 -48007.3516)">
+		<stop  offset="0" style="stop-color:#EDD6BA"/>
+		<stop  offset="0.4462" style="stop-color:#EDD6BA"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<rect y="-120.437" clip-path="url(#EDI1_SVGID_2_)" fill="url(#EDI1_SVGID_3_)" width="418" height="372.437"/>
+</g>
+
+<g class="background" id="edition-1">
+<linearGradient id="EDI1_SVGID_4_" gradientUnits="userSpaceOnUse" x1="-135.6665" y1="-63.001" x2="-82.333" y2="-63.001">
+	<stop  offset="0" style="stop-color:#EDD6BA"/>
+	<stop  offset="0.4462" style="stop-color:#EDD6BA"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-135.667" y="-95.667" fill="url(#EDI1_SVGID_4_)" width="53.333" height="65.333"/>
+</g>
+
+<g class="background" id="edition-2">
+<radialGradient id="EDI_2_SVGID_1_" cx="378.6123" cy="17.916" r="526.5526" fx="413.4308" fy="39.064" gradientTransform="matrix(1 0 0 -1 -0.0552 251.8594)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFD17F"/>
+	<stop  offset="1" style="stop-color:#A0582C"/>
+</radialGradient>
+<rect x="-79.08" y="-175.602" fill="url(#EDI_2_SVGID_1_)" width="595.275" height="624.09"/>
+</g>
+
+<g class="background" id="edition-3">
+<radialGradient id="EDI_3_SVGID_1_" cx="381.2012" cy="236.167" r="526.5526" fx="416.0197" fy="257.3151" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#E99D23"/>
+	<stop  offset="1" style="stop-color:#3593D1"/>
+</radialGradient>
+<rect x="-76.437" y="-173.377" fill="url(#EDI_3_SVGID_1_)" width="595.276" height="624.089"/>
+<text transform="matrix(1 0 0 1 460.6816 -134.4946)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="20"> </text>
+<rect x="226.17" y="-155.06" opacity="0.8" fill="#FFFFFF" width="4.572" height="4.573"/>
+<rect x="412.982" y="-72.773" opacity="0.3" fill="#FFFFFF" width="4.572" height="4.573"/>
+<rect x="268.095" y="-109.393" opacity="0.4" fill="#FFFFFF" width="4.572" height="4.573"/>
+</g>
+
+<g class="background" id="edition-4">
+<radialGradient id="EDI_4_SVGID_1_" cx="-101.4775" cy="-208.833" r="746.6719" gradientTransform="matrix(1 0 0 1 0.7632 0)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#0F1556"/>
+	<stop  offset="1" style="stop-color:#0F1530"/>
+</radialGradient>
+<rect x="-102.484" y="-208.723" fill="url(#EDI_4_SVGID_1_)" width="595.276" height="624.089"/>
+<radialGradient id="EDI_4_SVGID_2_" cx="251.123" cy="337.7266" r="252.1431" gradientTransform="matrix(0.9995 0 0 1.9068 0.968 -294.4988)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#32374F"/>
+	<stop  offset="1" style="stop-color:#000519;stop-opacity:0.3"/>
+</radialGradient>
+<rect x="-102.484" y="-208.723" fill="url(#EDI_4_SVGID_2_)" width="594.96" height="624.089"/>
+<radialGradient id="EDI_4_SVGID_3_" cx="144.8979" cy="332.6416" r="166.2246" gradientTransform="matrix(-5.810117e-08 -4.4545 2.8485 -4.172744e-07 -840.9434 953.6334)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0.0947" style="stop-color:#C6A183;stop-opacity:0.7"/>
+	<stop  offset="1" style="stop-color:#916F5E;stop-opacity:0"/>
+</radialGradient>
+<rect x="-102.729" y="-355.333" fill="url(#EDI_4_SVGID_3_)" width="595.5" height="771.511"/>
+<text transform="matrix(1 0 0 1 433.8643 -169.8403)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="20"> </text>
+<text transform="matrix(1 0 0 1 -45.7915 70.9375)" font-family="'HelveticaNeue'" font-size="18"> </text>
+<linearGradient id="EDI_4_SVGID_4_" gradientUnits="userSpaceOnUse" x1="-260.8662" y1="-327.0723" x2="303.1065" y2="209.9016">
+	<stop  offset="0" style="stop-color:#1D1B3E;stop-opacity:0"/>
+	<stop  offset="0.2893" style="stop-color:#283E3F;stop-opacity:0.6"/>
+	<stop  offset="0.6732" style="stop-color:#283E3F;stop-opacity:0.4"/>
+	<stop  offset="1" style="stop-color:#1D1B3E;stop-opacity:0"/>
+</linearGradient>
+<rect x="-101.73" y="-208.723" fill="url(#EDI_4_SVGID_4_)" width="595.277" height="633.117"/>
+</g>
+
+</svg>
