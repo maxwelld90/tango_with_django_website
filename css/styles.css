@@ -313,6 +313,18 @@ main {
         main section ul.grid li span a:hover {
             color: #D5D8DA;
         }
+
+        main section ul.grid li a.full {
+            display: block;
+            color: #FFF;
+            height: 100% !important;
+            width: 100%;
+            text-decoration: none;
+        }
+        
+        main section ul.grid li a:hover.full {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
     
     main div.rose {
         min-height: 100px;
@@ -358,24 +370,12 @@ ul.technologies li.deploying {
     grid-column: 2 / span 2;
 }
 
-/* Previous releases custom stylings */
+/* Editions custom stylings */
 
 main section ul.grid.editions li {
     position: relative;
     height: 250px;
     min-height: auto;
-}
-
-main section ul.grid.editions li a {
-    display: block;
-    color: #FFF;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-}
-
-main section ul.grid.editions li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
 }
 
 main section ul.grid.editions li span {
@@ -510,7 +510,6 @@ ul.authors li {
 
         ul.authors li div.text ul.links li a {
             padding: 8px 8px 8px calc(13px + 12pt);
-            font-family: 'Raleway', sans-serif;
             font-size: 12pt;
             text-decoration: none;
             color: #FFF;
@@ -529,13 +528,50 @@ ul.authors li {
         }
 
         ul.authors li div.text ul.links li a.twitter {
-            background-image: url('../img/icons.svg#bird');
+            background-image: url('../img/icons.svg#twitter');
         }
 
         ul.authors li div.text ul.links li a.git {
-            background-image: url('../img/icons.svg#git-branches');
+            background-image: url('../img/icons.svg#github');
         }
 
         ul.authors li div.text ul.links li a:hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
+
+/* Contact custom styles */
+
+ul.contact {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: 2 !important;
+}
+
+ul.contact li {
+    min-height: 0 !important;
+}
+
+ul.contact li.twitter {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    background-image: url('../img/backgrounds/contact-twd.svg'), linear-gradient(-120deg, #1B2A3B, #675759);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+/* Responsive styling */
+
+@media(max-height:865px) {
+    nav div.nav-footer div.landscape {
+        display: none;
+    }
+
+    nav div.nav-footer div.text {
+        color: #160F0B;
+        background-color: transparent;
+        padding: 20px 20px 20px 20px;
+    }
+
+    nav div.nav-footer div.text span.copyright-other a {
+        color: #160F0B;
+    }
+}
