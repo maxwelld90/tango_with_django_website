@@ -135,7 +135,7 @@ nav span.header {
     }
 
     nav span.header a:hover {
-        color: #EBEEF0;
+        color: #D1CDCD;
     }
 
 nav span.subheading {
@@ -615,9 +615,46 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1520px) { /* Navbar footer text -- scale font at smaller screen widths */
-    nav div.nav-footer div.text span.copyright-us, nav div.nav-footer div.text span.copyright-other {
-        font-size: 12pt;
+@media(max-width: 1050px) { /* The big change: for narrow widths, bring the navbar to the top. Readjust margins. */
+    .flex-container.main {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        flex: 0 1 auto;
+        position: static;
+    }
+
+        nav span.header {
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        nav div.nav-footer {
+            display: none;
+        }
+
+        main div.rose-footer span {
+            display: block;
+        }
+
+    main {
+        flex: 0 1 auto;
+    }
+
+    main h2 {
+        font-size: 38pt;
+        line-height: 45pt;
+        text-align: center;
+        padding: 30px;
+        background-position: right top;
+    }
+
+    main h2, main p, main section ul.grid, main div.rose-footer {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -627,7 +664,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1140px) { /* Change the layout of the blocks from grid to block -- on top of each other. */
+@media(max-width: 1190px) and (min-width: 1050px), (max-width: 900px) { /* Change the layout of the blocks from grid to block -- on top of each other. */
     main section ul.grid {
         display: block;
     }
@@ -675,18 +712,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1370px) and (min-width: 1140px) {
-    main section ul.grid.editions li span.date {
-        display: none;
-    }
-
-    main section ul.grid.editions li span.price {
-        left: 20px;
-        right: auto;
-    }
-}
-
-@media(max-width: 1140px) { /* Restyle each author block to use the small mobile image, rather than the background image. */
+@media(max-width: 1190px) and (min-width: 1050px), (max-width: 850px) { /* Restyle each author block to use the small mobile image, rather than the background image. */
     ul.authors li {
         display: block;
         text-align: center;
@@ -742,4 +768,22 @@ ul.contact li.twitter {
     ul.authors li {
         grid-template-columns: 65% 35%;
     }
+}
+
+@media(max-width: 800px) { /* From this width, hide the big header. */
+    header {
+        display: none;
+    }
+}
+
+@media(max-width: 650px) { /* For super narrow screens, hide the rose in the footer. Emphasise copyright. */
+    main div.rose-footer {
+        height: 75px;
+        background-image: none;
+    }
+
+        main div.rose-footer span {
+            width: 100%;
+            text-align: center;
+        }
 }
