@@ -432,12 +432,14 @@ main section ul.grid.editions li span.date {
     position: absolute;
     bottom: 20px;
     left: 20px;
+    font-size: 1.5vw;
 }
 
 main section ul.grid.editions li span.price {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    font-size: 1.5vw;
 }
 
 
@@ -621,7 +623,7 @@ ul.contact li.twitter {
 
 @media(max-width: 1250px) { /* Styles for resizing of various components of the boxes in the main content */
     main section ul.grid li h3 { /* Fix header font size to 14pt for smaller screens */
-        font-size: 14pt;
+        font-size: 22pt;
     }
 }
 
@@ -632,7 +634,7 @@ ul.contact li.twitter {
 
         main section ul.grid li {
             margin-bottom: 20px;
-            min-height: 0; /* Remove min-height from blocks, but we need it for authors, so add it in below */
+            min-height: 0; /* Remove min-height from blocks, but we need it for authors, so add it in below. */
         }
 
         main section ul.grid li:last-child {
@@ -644,12 +646,44 @@ ul.contact li.twitter {
     }
 
     main h2 {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
         main h2#intro { /* Remove the margin from the introductory header */
             margin-top: 0;
         }
+    
+    main section ul.grid.editions li span.twd-title {
+        font-size: 16pt;
+    }
+    
+    main section ul.grid.editions li span.release {
+        font-size: 28pt;
+        line-height: 38pt;
+    }
+
+    main section ul.grid.editions li span.also {
+        font-size: 14pt;
+    }
+
+    main section ul.grid.editions li span.date {
+        font-size: 14pt;
+    }
+
+    main section ul.grid.editions li span.price {
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 1370px) and (min-width: 1140px) {
+    main section ul.grid.editions li span.date {
+        display: none;
+    }
+
+    main section ul.grid.editions li span.price {
+        left: 20px;
+        right: auto;
+    }
 }
 
 @media(max-width: 1140px) { /* Restyle each author block to use the small mobile image, rather than the background image. */
