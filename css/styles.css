@@ -237,7 +237,7 @@ main {
     }
 
     main h2 {
-        margin: 300px 50px 50px 50px;
+        margin: 100px 50px 50px 50px;
         font-family: 'Raleway', sans-serif;
         font-size: 3.5vw;
         padding: 7.05vw 30px 30px 30px;
@@ -513,6 +513,7 @@ ul.authors li {
 
     ul.authors li div.text span.blurb {
         font-size: 14pt;
+        padding-bottom: 50px;
     }
 
     ul.authors li div.text ul.links {
@@ -609,5 +610,102 @@ ul.contact li.twitter {
 
     main div.rose-footer span {
         display: block;
+    }
+}
+
+@media(max-width: 1520px) { /* Navbar footer text -- scale font at smaller screen widths */
+    nav div.nav-footer div.text span.copyright-us, nav div.nav-footer div.text span.copyright-other {
+        font-size: 12pt;
+    }
+}
+
+@media(max-width: 1250px) { /* Styles for resizing of various components of the boxes in the main content */
+    main section ul.grid li h3 { /* Fix header font size to 14pt for smaller screens */
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 1140px) { /* Change the layout of the blocks from grid to block -- on top of each other. */
+    main section ul.grid {
+        display: block;
+    }
+
+        main section ul.grid li {
+            margin-bottom: 20px;
+            min-height: 0; /* Remove min-height from blocks, but we need it for authors, so add it in below */
+        }
+
+        main section ul.grid li:last-child {
+            margin-bottom: 0;
+        }
+
+    ul.contact li.twitter {
+        background-image: linear-gradient(-120deg, #1B2A3B, #675759);
+    }
+
+    main h2 {
+        margin-top: 50px;
+    }
+
+        main h2#intro { /* Remove the margin from the introductory header */
+            margin-top: 0;
+        }
+}
+
+@media(max-width: 1140px) { /* Restyle each author block to use the small mobile image, rather than the background image. */
+    ul.authors li {
+        display: block;
+        text-align: center;
+        background-image: none !important;
+    }
+
+    ul.authors div.image-desktop {
+        display: none;
+    }
+
+    ul.authors li img.mobile-img {
+        display: inline-block;
+        margin: 20px 0 0 0;
+        width: 35%;
+        height: 35%;
+        border-radius: 50%;
+    }
+
+    ul.authors li div.text span.name {
+        font-size: 22pt;
+    }
+
+    ul.authors li div.text span.blurb {
+        padding-bottom: 0;
+    }
+
+    ul.authors li div.text ul.links {
+        position: static;
+        margin: 0 20px 0 20px;
+        padding: 0 0 15px 0;
+        list-style-type: none;
+    }
+
+    ul.authors li div.text ul.links li {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    ul.authors li div.text ul.links li a {
+        display: block;
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 1320px) { /* Adjust the desktop author image position slightly so that the face still fits! */
+    ul.authors li {
+        grid-template-columns: 68% 32%;
+    }
+}
+
+@media(max-width: 1220px) { /* Adjust the desktop author image position slightly so that the face still fits! */
+    ul.authors li {
+        grid-template-columns: 65% 35%;
     }
 }
