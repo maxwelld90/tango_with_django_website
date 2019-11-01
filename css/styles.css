@@ -110,6 +110,7 @@ nav {
     position: sticky;
     top: 0;
     flex: 0.28;
+    z-index: 100;
     color: #FFF;
     background-color: #000;
     background-image: url('../img/backgrounds/navbar.svg');
@@ -143,6 +144,10 @@ nav span.subheading {
     font-size: 1.5vw;
     line-height: 2vw;
     text-shadow: 0 0 20px #333;
+}
+
+nav a.menu-icon {
+    display: none;
 }
 
 nav ul.links {
@@ -386,7 +391,7 @@ ul.technologies li.deploying {
 main section ul.grid.editions li {
     position: relative;
     height: 250px;
-    min-height: auto;
+    min-height: 0;
 }
 
 main section ul.grid.editions li span {
@@ -517,7 +522,7 @@ ul.authors li {
             display: inline-block;
             background-color: transparent;
             background-image: none;
-            min-height: auto;
+            min-height: 0;
             margin-right: 2px;
         }
 
@@ -583,14 +588,39 @@ ul.contact li.twitter {
     nav {
         width: 100%;
         height: auto;
+        min-height: 84px;
         flex: 0 1 auto;
-        position: static;
+        top: 0;
+        background-image: linear-gradient(-180deg, #171B34, #1B2544);
+        box-shadow: 0 1px 30px #333;
     }
 
         nav span.header {
-            margin-top: 0;
+            margin: 0 20px 0 20px;
             padding-top: 20px;
+            font-size: 16pt;
         }
+
+        nav span.subheading {
+            font-size: 10pt;
+            line-height: normal;
+            margin: -5px 20px 0 20px;
+            padding: 10px 0 20px 0;
+        }
+
+        nav a.menu-icon {
+            display: block;
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            width: 48px;
+            height: 48px;
+        }
+
+            nav a.menu-icon img {
+                width: 100%;
+                height: 100%;
+            }
 
         nav div.nav-footer {
             display: none;
@@ -598,6 +628,12 @@ ul.contact li.twitter {
 
         main div.rose-footer span {
             display: block;
+            padding-top: 40px;
+            font-size: 12pt;
+        }
+    
+        main div.rose-footer span em {
+            font-size: 10pt;
         }
 
     main {
@@ -605,7 +641,7 @@ ul.contact li.twitter {
     }
 
     main h2 {
-        font-size: 36pt;
+        font-size: 32pt;
         line-height: 45pt;
         text-align: center;
         padding: 30px;
@@ -616,7 +652,32 @@ ul.contact li.twitter {
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    /* Tweak the navbar links */
+    nav ul.links {
+        margin: 10px 20px 20px 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    nav ul.links.internal {
+        padding-bottom: 0;
+    }
 }
+
+@media(max-width: 1050px) and (min-width: 700px) {
+    nav ul.links li {
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+
 
 @media(max-width: 1300px) { /* Adjust header font sizes when screen size reduces */
     main section ul.grid li h3 {
@@ -654,7 +715,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1320px) and (min-width: 1240px), (max-width: 460px) {
+@media(max-width: 1320px) and (min-width: 1240px), (max-width: 460px) { /* Removing the release dates from edition blocks when the screen can't afford to fit them in */
     main section ul.grid.editions li span.date {
         display: none;
     }
@@ -674,13 +735,12 @@ ul.contact li.twitter {
     }
 
     main section ul.grid li {
-        margin-bottom: 20px;
+        margin-top: 20px;
         min-height: 0;
-        /* Do we need min-height here, and if we do, what about the authors blocks? */
     }
 
-    main section ul.grid li:last-child {
-        margin-bottom: 0;
+    main section ul.grid li:first-child {
+        margin-top: 0;
     }
 
     ul.contact li.twitter { /* Drop the Rango dude because there's no room (contact Twitter box) */
@@ -731,5 +791,64 @@ ul.contact li.twitter {
     main div.rose-footer {
         background-image: none;
         text-align: center;
+    }
+}
+
+@media(max-width: 1330px) { /* Slightly readjust the desktop author image (move to the left) */
+    ul.authors li {
+        grid-template-columns: 69% 31%;
+    }
+}
+
+@media(max-width: 1200px) and (min-width: 1050px), (max-width: 860px) { /* Change the author blocks to the "narrow" design, removing the background images. */
+    ul.authors li {
+        display: block;
+        text-align: center;
+        background-image: none !important;
+    }
+
+    ul.authors div.image-desktop {
+        display: none;
+    }
+
+    ul.authors li img.mobile-img {
+        display: inline-block;
+        margin: 20px 0 0 0;
+        width: 35%;
+        height: 35%;
+        border-radius: 50%;
+    }
+
+    ul.authors li div.text span.blurb {
+        padding-bottom: 0;
+    }
+
+    ul.authors li div.text ul.links {
+        position: static;
+        margin: 0 20px 20px 20px;
+        list-style-type: none;
+    }
+
+    ul.authors li div.text ul.links li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+
+    ul.authors li div.text ul.links li:last-child {
+        padding-bottom: 20px;
+    }
+
+    ul.authors li div.text ul.links li a {
+        display: block;
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 800px) { /* Make the author image a little bigger on small screens. */
+    ul.authors li img.mobile-img {
+        width: 45%;
+        height: 45%;
     }
 }
