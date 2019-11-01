@@ -600,7 +600,7 @@ ul.contact li.twitter {
 /* Responsive styling */
 /**********************/
 
-@media(max-width: 1050px) { /* The big change: for narrow widths, bring the navbar to the top. Readjust margins. */
+@media(max-width: 1050px), (max-height: 620px) { /* The big change: for narrow widths, bring the navbar to the top. Readjust margins. */
     .flex-container.main {
         display: block;
     }
@@ -718,7 +718,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1050px) and (min-width: 600px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
+@media(max-width: 1050px) and (min-width: 600px), (max-height: 620px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
     nav ul.links[aria-expanded="false"] {
         display: none;
     }
@@ -924,12 +924,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 800px) { /* Make the author image a little bigger on small screens, and tweak header font sizes to scale for smaller devices. */
-    ul.authors li img.mobile-img {
-        width: 45%;
-        height: 45%;
-    }
-
+@media(max-width: 800px) { /* Tweak header font sizes to scale for smaller devices. */
     main h2 {
         margin: 50px 20px 50px 20px;
         padding: 4vw;
@@ -942,5 +937,43 @@ ul.contact li.twitter {
 @media(max-width: 850px) { /* Justify paragraphs on small screens. Looks neater on a mobile. */
     main p {
         text-align: justify;
+    }
+}
+
+@media(max-width: 1000px) { /* Styling for the header block */
+    header h1 {
+        font-size: 10vw;
+    }
+
+        header h1 span {
+            display: none;
+        }
+
+    header span.subheading {
+        font-size: 3.5vw;
+    }
+
+    header ul.buttons li a {
+        font-size: 14pt;
+    }
+
+    header div.love {
+        font-size: 14pt;
+    }
+
+    header div.sales {
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 800px) { /* Header padding changes */
+    header h1 {
+        padding-top: 25vh;
+    }
+}
+
+@media(max-width: 600px), (max-height: 550px) { /* Hide the header for small screens. */
+    header {
+        display: none;
     }
 }
