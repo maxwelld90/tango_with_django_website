@@ -15,6 +15,12 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
 header {
     width: 100%;
     height: 100%;
@@ -219,6 +225,7 @@ nav ul.links {
 
             nav div.nav-footer div.text span em {
                 display: block;
+                font-size: 10pt;
             }
 
 /* Copyright span elements (for both rose footer and navbar footer) */
@@ -598,6 +605,10 @@ ul.contact li.twitter {
         display: block;
     }
 
+    a.anchor {
+        top: -100px;
+    }
+
     nav {
         width: 100%;
         height: auto;
@@ -605,7 +616,7 @@ ul.contact li.twitter {
         flex: 0 1 auto;
         top: 0;
         background-color: transparent;
-        background-image: linear-gradient(45deg, rgba(28, 38, 58, 0.99), rgba(52, 47, 63, 0.97));
+        background-image: linear-gradient(45deg, rgba(28, 38, 58, 0.99), rgba(52, 47, 63, 0.95));
         box-shadow: 0 1px 30px #000;
     }
 
@@ -654,6 +665,10 @@ ul.contact li.twitter {
             color: #000;
         }
 
+    main section {
+        min-height: 0;
+    }
+
     main {
         flex: 0 1 auto;
     }
@@ -682,18 +697,54 @@ ul.contact li.twitter {
         text-align: center;
     }
 
+    nav ul.links li a {
+        background-color: #4968A5;
+    }
+
+        nav ul.links li a:hover {
+            background-color: #040508;
+        }
+    
+    nav ul.links li a.buy {
+        background-color: #A34A4A;
+    }
+
+        nav ul.links li a.buy:hover {
+            background-color: #522525;
+        }
+
     nav ul.links.internal {
         padding-bottom: 0;
     }
 }
 
-@media(max-width: 1050px) and (min-width: 700px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
+@media(max-width: 1050px) and (min-width: 600px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
     nav ul.links[aria-expanded="false"] {
         display: none;
     }
 
+    nav ul.links {
+        margin: 0 20px 0 20px;
+        padding: 0;
+    }
+
+    nav ul.links.external {
+        padding-bottom: 15px;
+    }
+
     nav ul.links li {
         display: inline-block;
+    }
+
+    nav ul.links li a {
+        padding: 12px;
+        font-size: 12pt;
+        border-bottom: none;
+    }
+
+    nav ul.links li a.buy {
+        font-size: 12pt;
+        
     }
 }
 
@@ -705,7 +756,6 @@ ul.contact li.twitter {
         display: block;
     }
 }
-
 
 @media(max-width: 1300px) { /* Adjust header font sizes when screen size reduces */
     main section ul.grid li h3 {
@@ -874,9 +924,23 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 800px) { /* Make the author image a little bigger on small screens. */
+@media(max-width: 800px) { /* Make the author image a little bigger on small screens, and tweak header font sizes to scale for smaller devices. */
     ul.authors li img.mobile-img {
         width: 45%;
         height: 45%;
+    }
+
+    main h2 {
+        margin: 50px 20px 50px 20px;
+        padding: 4vw;
+        font-size: 5vw;
+        line-height: 7vw;
+        text-align: center;
+    }
+}
+
+@media(max-width: 850px) { /* Justify paragraphs on small screens. Looks neater on a mobile. */
+    main p {
+        text-align: justify;
     }
 }
