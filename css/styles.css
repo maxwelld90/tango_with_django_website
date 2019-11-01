@@ -718,7 +718,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1050px) and (min-width: 600px), (max-height: 620px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
+@media(max-width: 1050px) and (min-width: 600px), (max-height: 620px) and (min-width: 600px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
     nav ul.links[aria-expanded="false"] {
         display: none;
     }
