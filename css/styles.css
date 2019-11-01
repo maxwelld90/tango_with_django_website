@@ -146,6 +146,15 @@ nav span.subheading {
     text-shadow: 0 0 20px #333;
 }
 
+    nav span.subheading span {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav span.subheading span.small-screen {
+        display: none;
+    }
+
 nav a.menu-icon {
     display: none;
 }
@@ -678,13 +687,9 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1050px) and (min-width: 700px) {
+@media(max-width: 1050px) and (min-width: 700px) { /* An intermediatary navbar style for medium-sized screens. Menu items are not full width here. */
     nav ul.links[aria-expanded="false"] {
         display: none;
-    }
-
-    nav ul.links[aria-expanded="true"] {
-        transition: max-height 500ms ease-in-out;
     }
 
     nav ul.links li {
@@ -692,7 +697,14 @@ ul.contact li.twitter {
     }
 }
 
-
+@media(max-width: 440px) { /* Control the navbar subheader in small screen devices. */
+    nav span.subheading span.large-screen {
+        display: none;
+    }
+    nav span.subheading span.small-screen {
+        display: block;
+    }
+}
 
 
 @media(max-width: 1300px) { /* Adjust header font sizes when screen size reduces */
