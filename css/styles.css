@@ -208,6 +208,10 @@ nav ul.links {
                 margin: 0;
             }
 
+            nav div.nav-footer div.text span em {
+                display: block;
+            }
+
 /* Copyright span elements (for both rose footer and navbar footer) */
 
 span.footer-text {
@@ -223,12 +227,12 @@ span.footer-text {
         font-size: 1.1vw;
     }
 
-    span.footer-text em a {
+    nav div.nav-footer div.text span em a, span.footer-text em a {
         color: #FFF;
         text-decoration: none;
     }
 
-        span.footer-text em a:hover {
+    nav div.nav-footer div.text span em a:hover, span.footer-text em a:hover {
             text-decoration: underline;
         }
 
@@ -591,8 +595,9 @@ ul.contact li.twitter {
         min-height: 84px;
         flex: 0 1 auto;
         top: 0;
-        background-image: linear-gradient(-180deg, #171B34, #1B2544);
-        box-shadow: 0 1px 30px #333;
+        background-color: transparent;
+        background-image: linear-gradient(45deg, rgba(28, 38, 58, 0.99), rgba(52, 47, 63, 0.97));
+        box-shadow: 0 1px 30px #000;
     }
 
         nav span.header {
@@ -636,6 +641,10 @@ ul.contact li.twitter {
             font-size: 10pt;
         }
 
+        main div.rose-footer span em a {
+            color: #000;
+        }
+
     main {
         flex: 0 1 auto;
     }
@@ -654,6 +663,10 @@ ul.contact li.twitter {
     }
 
     /* Tweak the navbar links */
+    nav ul.links[aria-expanded="false"] {
+        display: none;
+    }
+
     nav ul.links {
         margin: 10px 20px 20px 20px;
         padding-bottom: 20px;
@@ -666,15 +679,18 @@ ul.contact li.twitter {
 }
 
 @media(max-width: 1050px) and (min-width: 700px) {
+    nav ul.links[aria-expanded="false"] {
+        display: none;
+    }
+
+    nav ul.links[aria-expanded="true"] {
+        transition: max-height 500ms ease-in-out;
+    }
+
     nav ul.links li {
         display: inline-block;
     }
 }
-
-
-
-
-
 
 
 
@@ -758,7 +774,7 @@ ul.contact li.twitter {
         background-color: transparent;
     }
 
-    span.footer-text em a {
+    nav div.nav-footer div.text span em a {
         color: #160F0B;
     }
 }
@@ -782,7 +798,7 @@ ul.contact li.twitter {
         color: #000;
     }
 
-    main div.rose-footer a {
+    main div.rose-footer span em a {
         color: #000;
     }
 }
