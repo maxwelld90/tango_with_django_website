@@ -205,26 +205,27 @@ nav ul.links {
 
 /* Copyright span elements (for both rose footer and navbar footer) */
 
-span.copyright-us {
-    font-size: 15pt;
+span.footer-text {
+    font-size: 1.2vw;
     font-weight: bold;
-    min-height: 20pt;
     font-family: 'Raleway', sans-serif;
 }
 
-span.copyright-other {
-    font-size: 12pt;
-    font-style: italic;
-}
+    span.footer-text em {
+        display: block;
+        font-family: 'Cabin', sans-serif;
+        font-weight: normal;
+        font-size: 1.1vw;
+    }
 
-    span.copyright-other a {
+    span.footer-text em a {
         color: #FFF;
         text-decoration: none;
     }
 
-    span.copyright-other a:hover {
-        text-decoration: underline;
-    }
+        span.footer-text em a:hover {
+            text-decoration: underline;
+        }
 
 /* Main content */
 
@@ -341,20 +342,6 @@ main {
 
         main div.rose-footer span {
             display: none;
-        }
-
-        main div.rose-footer span.copyright-other a {
-            color: #000;
-        }
-
-        main div.rose-footer span.copyright-us {
-            position: absolute;
-            bottom: 28px;
-        }
-
-        main div.rose-footer span.copyright-other {
-            position: absolute;
-            bottom: 10px;
         }
 
 /* Technologies grid custom stylings */
@@ -589,32 +576,6 @@ ul.contact li.twitter {
 /* Responsive styling */
 /**********************/
 
-@media(max-height: 865px) { /* Styles for the navbar footer messages -- hide the navbar landscapes below a certain height */
-    nav div.nav-footer div.landscape {
-        display: none;
-    }
-
-    nav div.nav-footer div.text {
-        color: #160F0B;
-        background-color: transparent;
-        padding: 20px 20px 20px 20px;
-    }
-
-    nav div.nav-footer div.text span.copyright-other a {
-        color: #160F0B;
-    }
-}
-
-@media(max-height: 730px) { /* Styles for the navbar/rose footer messages -- move to the rose when below a certain height */
-    nav div.nav-footer {
-        display: none;
-    }
-
-    main div.rose-footer span {
-        display: block;
-    }
-}
-
 @media(max-width: 1050px) { /* The big change: for narrow widths, bring the navbar to the top. Readjust margins. */
     .flex-container.main {
         display: block;
@@ -658,132 +619,67 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1250px) { /* Styles for resizing of various components of the boxes in the main content */
-    main section ul.grid li h3 { /* Fix header font size to 14pt for smaller screens */
-        font-size: 22pt;
-    }
-}
-
-@media(max-width: 1190px) and (min-width: 1050px), (max-width: 900px) { /* Change the layout of the blocks from grid to block -- on top of each other. */
+@media(max-width: 1240px) and (min-width:1050px), (max-width: 820px) { /* Drop grid layouts in favour of simple on-top-of-each-other design. */
     main section ul.grid {
         display: block;
     }
 
-        main section ul.grid li {
-            margin-bottom: 20px;
-            min-height: 0; /* Remove min-height from blocks, but we need it for authors, so add it in below. */
-        }
+    main section ul.grid li {
+        margin-bottom: 20px;
+        /* Do we need min-height here, and if we do, what about the authors blocks? */
+    }
 
-        main section ul.grid li:last-child {
-            margin-bottom: 0;
-        }
+    main section ul.grid li:last-child {
+        margin-bottom: 0;
+    }
 
-    ul.contact li.twitter {
+    ul.contact li.twitter { /* Drop the Rango dude because there's no room (contact Twitter box) */
         background-image: linear-gradient(-120deg, #1B2A3B, #675759);
     }
-
-    main h2 {
-        margin-top: 100px;
-    }
-
-        main h2#intro { /* Remove the margin from the introductory header */
-            margin-top: 0;
-        }
-    
-    main section ul.grid.editions li span.twd-title {
-        font-size: 16pt;
-    }
-    
-    main section ul.grid.editions li span.release {
-        font-size: 28pt;
-        line-height: 38pt;
-    }
-
-    main section ul.grid.editions li span.also {
-        font-size: 14pt;
-    }
-
-    main section ul.grid.editions li span.date {
-        font-size: 14pt;
-    }
-
-    main section ul.grid.editions li span.price {
-        font-size: 14pt;
-    }
 }
 
-@media(max-width: 1190px) and (min-width: 1050px), (max-width: 850px) { /* Restyle each author block to use the small mobile image, rather than the background image. */
-    ul.authors li {
-        display: block;
-        text-align: center;
-        background-image: none !important;
-    }
-
-    ul.authors div.image-desktop {
+@media(max-height: 840px) { /* Hide the landscape at the bottom of the navbar when the height of the viewport is too small to fit it. */
+    nav div.nav-footer div.landscape {
         display: none;
     }
 
-    ul.authors li img.mobile-img {
-        display: inline-block;
-        margin: 20px 0 0 0;
-        width: 35%;
-        height: 35%;
-        border-radius: 50%;
+    nav div.nav-footer div.text {
+        color: #160F0B;
+        background-color: transparent;
     }
 
-    ul.authors li div.text span.name {
-        font-size: 22pt;
-    }
-
-    ul.authors li div.text span.blurb {
-        padding-bottom: 0;
-    }
-
-    ul.authors li div.text ul.links {
-        position: static;
-        margin: 0 20px 0 20px;
-        padding: 0 0 15px 0;
-        list-style-type: none;
-    }
-
-    ul.authors li div.text ul.links li {
-        display: block;
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    ul.authors li div.text ul.links li a {
-        display: block;
-        font-size: 14pt;
+    span.footer-text em a {
+        color: #160F0B;
     }
 }
 
-@media(max-width: 1320px) { /* Adjust the desktop author image position slightly so that the face still fits! */
-    ul.authors li {
-        grid-template-columns: 68% 32%;
-    }
-}
-
-@media(max-width: 1220px) { /* Adjust the desktop author image position slightly so that the face still fits! */
-    ul.authors li {
-        grid-template-columns: 65% 35%;
-    }
-}
-
-@media(max-width: 800px) { /* From this width, hide the big header. */
-    header {
+@media(max-height: 720px) { /* Hide the nav footer completely (and show the rose footer!) when the size of the viewport is way too small. */
+    nav div.nav-footer {
         display: none;
     }
-}
 
-@media(max-width: 650px) { /* For super narrow screens, hide the rose in the footer. Emphasise copyright. */
+    main div.rose-footer span {
+        display: block;
+        padding-top: 40px;
+        font-size: 12pt;
+    }
+
+    main div.rose-footer span em {
+        font-size: 10pt;
+    }
+
     main div.rose-footer {
-        height: 75px;
-        background-image: none;
+        color: #000;
     }
 
-        main div.rose-footer span {
-            width: 100%;
-            text-align: center;
-        }
+    main div.rose-footer a {
+        color: #000;
+    }
+}
+
+@media(max-width: 600px) {
+    main div.rose-footer {
+        background-image: none;
+        text-align: center;
+    }
 }
