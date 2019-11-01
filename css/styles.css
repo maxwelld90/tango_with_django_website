@@ -429,7 +429,6 @@ main section ul.grid.editions li span.price {
     font-size: 1.5vw;
 }
 
-
 main section ul.grid.editions li.edition-1 {
     background-image: url('../img/backgrounds/editions.svg#edition-1');
     background-position: right bottom;
@@ -606,7 +605,7 @@ ul.contact li.twitter {
     }
 
     main h2 {
-        font-size: 38pt;
+        font-size: 36pt;
         line-height: 45pt;
         text-align: center;
         padding: 30px;
@@ -619,6 +618,56 @@ ul.contact li.twitter {
     }
 }
 
+@media(max-width: 1300px) { /* Adjust header font sizes when screen size reduces */
+    main section ul.grid li h3 {
+        font-size: 20pt;
+    }
+
+    ul.authors li div.text span.name {
+        font-size: 20pt;
+    }
+}
+
+@media(max-width: 1240px) { /* Adjust styles for editions boxes */
+    main section ul.grid.editions li span.twd-title {
+        padding: 20px 20px 0 20px;
+        font-size: 14pt;
+    }
+
+    main section ul.grid.editions li span.release {
+        padding: 10px 20px 0 20px;
+        font-size: 30pt;
+        line-height: normal;
+    }
+
+    main section ul.grid.editions li span.also {
+        padding: 10px 20px 0 20px;
+        font-size: 16pt;
+    }
+
+    main section ul.grid.editions li span.date {
+        font-size: 14pt;
+    }
+
+    main section ul.grid.editions li span.price {
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 1320px) and (min-width: 1240px), (max-width: 460px) {
+    main section ul.grid.editions li span.date {
+        display: none;
+    }
+
+    main section ul.grid.editions li span.price {
+        left: 20px;
+    }
+
+    main section ul.grid.editions li span.also {
+        padding-bottom: 100px !important;
+    }
+}
+
 @media(max-width: 1240px) and (min-width:1050px), (max-width: 820px) { /* Drop grid layouts in favour of simple on-top-of-each-other design. */
     main section ul.grid {
         display: block;
@@ -626,6 +675,7 @@ ul.contact li.twitter {
 
     main section ul.grid li {
         margin-bottom: 20px;
+        min-height: 0;
         /* Do we need min-height here, and if we do, what about the authors blocks? */
     }
 
@@ -677,7 +727,7 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 600px) { /* On small-screen devices, remove the rose image for the footer and centre the text. */
     main div.rose-footer {
         background-image: none;
         text-align: center;
