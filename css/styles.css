@@ -846,12 +846,12 @@ ul.contact li.twitter {
     }
 
     nav div.nav-footer div.text {
-        color: #160F0B;
+        color: #000;
         background-color: transparent;
     }
 
     nav div.nav-footer div.text span em a {
-        color: #160F0B;
+        color: #000;
     }
 }
 
