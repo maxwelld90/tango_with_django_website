@@ -222,11 +222,15 @@ nav ul.links {
 
             nav div.nav-footer div.text span {
                 margin: 0;
+                font-weight: bold;
+                font-family: 'Raleway', sans-serif;
             }
 
             nav div.nav-footer div.text span em {
                 display: block;
+                font-family: 'Cabin', sans-serif;
                 font-size: 10pt;
+                font-weight: normal;
             }
 
 /* Copyright span elements (for both rose footer and navbar footer) */
