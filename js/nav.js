@@ -16,4 +16,37 @@ $(document).ready(function() {
     $('nav ul.links.internal li a').click(function() {
         $('ul.links').attr('aria-expanded', 'false');
     })
+
+    /* Work out what navrbar link to highlight -- see https://stackoverflow.com/a/9980042 */
+
+    /* Create a cache of links for the navbar */
+    var topMenu = $('ul.links.internal');
+    var menuItems = topMenu.find('a');
+    var scrollItems = menuItems.map(function() {
+        var item = $($(this).attr('href'));
+        if (item.length) { return item; }
+    });
+
+    /* On scroll, work out what navbar item to highlight */
+    $(window).scroll(function() {
+        var fromTop = $(this).scrollTop()+20;
+        
+        var current = scrollItems.map(function() {
+            if ($(this).offset().top < fromTop) {
+                return this;
+            }
+        });
+
+        current = current[current.length-1];
+        var id = current && current.length ? current[0].id : "";
+
+        menuItems
+            .removeClass('active')
+            .end();
+        
+        menuItems
+            .filter('[href=\'#' + id + '\']')
+            .addClass('active');
+    })
+
 });

@@ -189,6 +189,10 @@ nav ul.links {
         border-color: #111A1F;
     }
 
+    nav ul.links li a.active {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
     nav ul.links li a.buy {
         font-size: 16pt;
         background-color: rgba(102, 68, 54, 0.45);
