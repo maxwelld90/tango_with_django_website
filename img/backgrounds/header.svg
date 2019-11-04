@@ -20,12 +20,12 @@
         }
         
         #cloud1 {
-            animation: cloud1-animation 10s linear alternate 1;
+            animation: cloud1-animation 500s linear alternate 1;
             animation-fill-mode: forwards;
         }
         
         #cloud2 {
-            animation: cloud2-animation 10s linear alternate 1;
+            animation: cloud2-animation 700s linear alternate 1;
             animation-fill-mode: forwards;
         }
         
