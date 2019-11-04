@@ -1010,3 +1010,28 @@ ul.contact li.twitter {
         display: none;
     }
 }
+
+@media(max-width: 400px) { /* For very small screens, remove the also tagline for editions -- not enough room. */
+    main section ul.grid.editions li span.also {
+        display: none;
+    }
+}
+
+@media(min-width: 1500px) { /* For larger screens, the editions boxes look a bit janky -- fix the font sizes. */
+    main section ul.grid.editions li span.twd-title {
+        font-size: 14pt;
+    }
+
+    main section ul.grid.editions li span.release {
+        font-size: 36pt;
+        line-height: 48pt;
+    }
+
+    main section ul.grid.editions li span.also {
+        font-size: 16pt;
+    }
+
+    main section ul.grid.editions li span.date, main section ul.grid.editions li span.price {
+        font-size: 16pt;
+    }
+}
