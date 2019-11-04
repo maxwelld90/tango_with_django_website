@@ -948,6 +948,25 @@ ul.contact li.twitter {
     }
 }
 
+@media(max-width: 500px) { /* Adjust section headers for very small screens! */
+    main h2 {
+        margin: 50px 20px 25px 20px;
+        padding: 0;
+        font-size: 8vw;
+        line-height: normal;
+        text-align: left;
+        word-break: break-word;
+        background: none;
+        color: #0B1832;
+    }
+}
+
+@media(max-width: 400px) { /* For even smaller screens, increase the font size further. */
+    main h2 {
+        font-size: 12vw;
+    }
+}
+
 @media(max-width: 850px) { /* Justify paragraphs on small screens. Looks neater on a mobile. */
     main p {
         text-align: justify;
