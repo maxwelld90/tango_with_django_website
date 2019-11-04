@@ -6,7 +6,7 @@
 	 xml:space="preserve">
      
      <style type="text/css">
-        /*#star1 { animation: star-animation 2s linear alternate infinite; }
+        #star1 { animation: star-animation 2s linear alternate infinite; }
         #star2 { animation: star-animation 3s linear alternate infinite; }
         #star3 { animation: star-animation 0.9s linear alternate infinite; }
         #star4 { animation: star-animation 1.5s linear alternate infinite; }
@@ -20,11 +20,13 @@
         }
         
         #cloud1 {
-            animation: cloud1-animation 500s linear alternate 1;
+            animation: cloud1-animation 10s linear alternate 1;
+            animation-fill-mode: forwards;
         }
         
         #cloud2 {
-            animation: cloud2-animation 700s linear alternate 1;
+            animation: cloud2-animation 10s linear alternate 1;
+            animation-fill-mode: forwards;
         }
         
         @keyframes cloud1-animation {
@@ -43,8 +45,7 @@
             to {
                 transform:translate(100%, 0px);
             }
-        }*/
-        
+        }
      </style>
      
      
