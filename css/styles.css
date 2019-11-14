@@ -840,18 +840,13 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-height: 840px) { /* Hide the landscape at the bottom of the navbar when the height of the viewport is too small to fit it. */
+@media(max-height: 900px) { /* Hide the landscape at the bottom of the navbar when the height of the viewport is too small to fit it. */
     nav div.nav-footer div.landscape {
         display: none;
     }
 
     nav div.nav-footer div.text {
-        color: #000;
         background-color: transparent;
-    }
-
-    nav div.nav-footer div.text span em a {
-        color: #000;
     }
 }
 
