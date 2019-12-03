@@ -508,16 +508,28 @@ main section ul.grid.editions li.edition-4 {
 ul.authors li {
     position: relative;
     display: grid;
-    grid-template-columns: 72% 28%;
 }
 
     ul.authors li.david {
         background-image: url('../img/authors/david-background.jpg');
         background-size: cover;
+        grid-template-columns: 70% 30%;
     }
 
     ul.authors li.david div.image-desktop {
         background-image: url('../img/authors/david-desktop.png');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+
+    ul.authors li.leif {
+        background-image: url('../img/authors/leif-background.jpg');
+        background-size: cover;
+        grid-template-columns: 62% 38%;
+    }
+
+    ul.authors li.leif div.image-desktop {
+        background-image: url('../img/authors/leif-desktop.png');
         background-repeat: no-repeat;
         background-position: left bottom;
     }
