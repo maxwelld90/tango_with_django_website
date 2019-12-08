@@ -504,40 +504,61 @@ main section ul.grid.editions li.edition-4 {
 }
 
 /* Authors custom styles */
-
 ul.authors li {
+    display: flex;
     position: relative;
-    display: grid;
+    min-height: 300px !important;
 }
+
+    ul.authors li div.image-desktop {
+        position: absolute;
+        height: 100%;
+        z-index: 0;
+    }
+
+    ul.authors li img.image-mobile {
+        display: none;
+    }
 
     ul.authors li.david {
         background-image: url('../img/authors/david-background.jpg');
         background-size: cover;
-        grid-template-columns: 70% 30%;
     }
 
     ul.authors li.david div.image-desktop {
+        width: 45%;
         background-image: url('../img/authors/david-desktop.png');
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right bottom;
     }
 
     ul.authors li.leif {
         background-image: url('../img/authors/leif-background.jpg');
         background-size: cover;
-        grid-template-columns: 62% 38%;
     }
 
     ul.authors li.leif div.image-desktop {
+        right: 0;
+        width: 40%;
         background-image: url('../img/authors/leif-desktop.png');
         background-repeat: no-repeat;
         background-position: left bottom;
     }
 
-    ul.authors li img.mobile-img {
-        display: none;
+    ul.authors li.david div.text {
+        margin-left: 28%;
     }
-    
+
+    ul.authors li.leif div.text {
+        margin-right: 28%;
+    }
+
+    ul.authors li div.text {
+        position: relative;
+        z-index: 1;
+        /*background-color: rgba(0.5, 0.5, 0.5, 0.5);*/
+    }
+
     ul.authors li div.text span.name {
         margin-top: 20px;
         line-height: normal;
@@ -547,24 +568,27 @@ ul.authors li {
 
     ul.authors li div.text span.blurb {
         font-size: 14pt;
-        padding-bottom: 50px;
+        margin-bottom: 60px;
     }
 
     ul.authors li div.text ul.links {
         position: absolute;
-        left: 20px;
-        bottom: 25px;
         margin: 0;
         padding: 0;
-        list-style-type: none;
+        left: 20px;
+        bottom: 25px;
+    }
+
+    ul.authors li.david div.text ul.links {
+        left: auto;
+        right: 20px;
     }
 
         ul.authors li div.text ul.links li {
             display: inline-block;
             background-color: transparent;
             background-image: none;
-            min-height: 0;
-            margin-right: 2px;
+            min-height: 0 !important;
         }
 
         ul.authors li div.text ul.links li a {
@@ -787,10 +811,6 @@ ul.contact li.twitter {
     main section ul.grid li h3 {
         font-size: 20pt;
     }
-
-    ul.authors li div.text span.name {
-        font-size: 20pt;
-    }
 }
 
 @media(max-width: 1240px) { /* Adjust styles for editions boxes */
@@ -893,58 +913,6 @@ ul.contact li.twitter {
     }
 }
 
-@media(max-width: 1330px) { /* Slightly readjust the desktop author image (move to the left) */
-    ul.authors li {
-        grid-template-columns: 69% 31%;
-    }
-}
-
-@media(max-width: 1200px) and (min-width: 1050px), (max-width: 860px) { /* Change the author blocks to the "narrow" design, removing the background images. */
-    ul.authors li {
-        display: block;
-        text-align: center;
-        background-image: none !important;
-    }
-
-    ul.authors div.image-desktop {
-        display: none;
-    }
-
-    ul.authors li img.mobile-img {
-        display: inline-block;
-        margin: 20px 0 0 0;
-        width: 35%;
-        height: 35%;
-        border-radius: 50%;
-    }
-
-    ul.authors li div.text span.blurb {
-        padding-bottom: 0;
-    }
-
-    ul.authors li div.text ul.links {
-        position: static;
-        margin: 0 20px 20px 20px;
-        list-style-type: none;
-    }
-
-    ul.authors li div.text ul.links li {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0 0 10px 0;
-    }
-
-    ul.authors li div.text ul.links li:last-child {
-        padding-bottom: 20px;
-    }
-
-    ul.authors li div.text ul.links li a {
-        display: block;
-        font-size: 14pt;
-    }
-}
-
 @media(max-width: 800px) { /* Tweak header font sizes to scale for smaller devices. */
     main h2 {
         margin: 50px 20px 50px 20px;
@@ -1040,5 +1008,103 @@ ul.contact li.twitter {
 
     main section ul.grid.editions li span.date, main section ul.grid.editions li span.price {
         font-size: 16pt;
+    }
+}
+
+@media(max-width: 1360px) and (min-width: 1050px), (max-width: 900px) { /* Change the author blocks to the "narrow" design, removing the background images. */
+    ul.authors li {
+        display: block;
+        text-align: center;
+        background-image: none !important;
+        min-height: 0 !important;
+    }
+
+    ul.authors div.image-desktop {
+        display: none;
+    }
+
+    ul.authors li img.image-mobile {
+        display: inline-block;
+        margin: 20px 0 0 0;
+        width: 35%;
+        height: 35%;
+        border-radius: 50%;
+    }
+
+    ul.authors li div.text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    ul.authors li div.text span.blurb {
+        margin-bottom: 20px;
+    }
+
+    ul.authors li div.text ul.links {
+        position: static;
+        margin: 0 20px 0 20px;
+        list-style-type: none;
+    }
+
+    ul.authors li div.text ul.links li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+
+    ul.authors li div.text ul.links li:last-child {
+        padding-bottom: 20px;
+    }
+
+    ul.authors li div.text ul.links li a {
+        display: block;
+        font-size: 14pt;
+    }
+}
+
+@media(min-width: 1440px) {
+    ul.authors li div.text span.name {
+        font-size: 30pt;
+    }
+}
+
+@media(max-width: 1300px) { /* On smaller screens, restrict the maximum size of the author names. */
+    ul.authors li div.text span.name {
+        font-size: 24pt;
+    }
+}
+
+@media(min-width: 1440px) { /* On larger screens, limit the font size for author names. */
+    ul.authors li div.text span.name {
+        font-size: 30pt;
+    }
+}
+
+@media(min-width: 1600px) { /* Adjust the positioning of David's image on large screens. */
+    ul.authors li.david div.image-desktop {
+        width: 40%;
+    }
+}
+
+@media(min-width: 2000px) { /* Adjust the positioning of David's image on large screens. */
+    ul.authors li.david div.image-desktop {
+        width: 35%;
+    }
+
+    ul.authors li.david div.text {
+        margin-left: 25%;
+    }
+}
+
+@media(min-width: 2080px) { /* For very large screen, move Leif to the right of the image container. */
+    ul.authors li.leif div.image-desktop {
+        background-position: right bottom;
+    }
+}
+
+@media(min-width: 2190px) { /* For very large screens, move David to the left of the image container. */
+    ul.authors li.david div.image-desktop {
+        background-position: left bottom;
     }
 }
